@@ -1,0 +1,6 @@
+.ccls
+.ccls-cache
+compile_commands.json
+.bookmarks
+.exrc
+.projections.json

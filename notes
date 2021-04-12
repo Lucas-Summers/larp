@@ -1,0 +1,25 @@
+TOKEN_T {
+    char *value;
+    enum {
+        TOKEN_COMMA,
+        TOKEN_DUBQUOTE,
+
+    }
+}
+
+READER_T {
+     char **tokens;
+     int pos;
+}
+
+LEXER_T {
+    char *src;
+    char c;
+    int i;
+}
+
+AST_T {
+    TOKEN_T *token;
+    AST_T **children;
+    int numChild;
+}

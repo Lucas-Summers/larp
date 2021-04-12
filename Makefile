@@ -10,8 +10,7 @@ LDFLAGS =
 CFLAGS = -std=c99 -Wall
 TARGET=${NAME}.out
 SRC = $(wildcard src/*.c)
-OBJ_DEPS = ${SRC:.c=.o}
-OBJ = $(patsubst %,src/%, ${OBJ_DEPS})
+OBJ = $(subst src/test.o,,${SRC:.c=.o})
 TEST_OBJ= $(subst src/main.o,src/test.o,${OBJ})
 PROJ_FILES = src examples Makefile README LICENSE ${NAME}-${VERSION}
 

@@ -28,11 +28,11 @@ options:
 ${TARGET}: ${OBJ}
 	${CC} -o $@ ${OBJ} ${LDFLAGS}
 
-${TARGET}.test: ${TEST_OBJ}
+test-${TARGET}.out: ${TEST_OBJ}
 	${CC} -o $@ ${TEST_OBJ} ${LDFLAGS}
 
-test: options clean ${TARGET}.test
-	./${TARGET}.test
+test: options clean test-${NAME}.out
+	./${TARGET}.test.out
 
 dist: clean
 	mkdir -p ${NAME}-${VERSION}

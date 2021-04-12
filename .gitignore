@@ -4,3 +4,5 @@ compile_commands.json
 .bookmarks
 .exrc
 .projections.json
+src/*.[oa]
+*.out
